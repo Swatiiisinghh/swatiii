@@ -1,0 +1,106 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .color{
+            height:70px;
+            width:70px;
+            border:5px solid black;
+            padding:25px;
+            
+        
+        margin:50px;
+            
+        
+            
+        }
+        #grey{
+            background-color: grey;
+            
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #red{
+            background-color: red;
+        }
+        #purple{
+            background-color: purple;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>MINI PROJECT 1</h1>
+    <div class="container">
+        
+        <div class="color" id="grey"> </div>
+        <div class="color" id="yellow"></div>
+        <div class="color" id="red"></div>
+        <div class="color" id="purple"></div>
+
+    </div>
+    <script>
+        const buttons=document.querySelectorAll('.color');
+        console.log(buttons)
+        const body=document.querySelector('body')
+        console.log(body)
+        buttons.forEach(function(color){
+            console.log(color);
+        
+    color.addEventListener ('click', function (e){
+        console.log(e);
+        console.log(e.target);
+    if(e.target.id==='grey'){
+       
+        body.style.backgroundColor= e.target.id;
+        body.style.color= 'white';
+      
+    
+        }
+    if(e.target.id==='yellow'){
+        body.style.backgroundColor= e.target.id;
+        body.style.border= '5px solid black';
+    }
+    if(e.target.id==='red'){
+        body.style.backgroundColor= e.target.id;
+        body.style.borderRadius= '80%';
+
+    }
+    if(e.target.id==='purple'){
+        body.style.backgroundColor= e.target.id;
+        body.style.borderRadius = '20%' ;
+        purple.style.backgroundColor='black';
+    }
+})   ;
+});
+   
+
+        // switch:(e.target.id){
+        //         case "grey":
+        //         body.style.backgroundColor=e.target.id;
+        //         break;
+        //         case "yellow":
+        //         body.style.backgroundColor=e.target.id;
+        //         break;
+        //         case "red":
+        //         body.style.backgroundColor=e.target.id;
+        //         break;
+        //         case purple:
+        //         body.style.backgroundColor=e.target.id;
+        //         break;
+        // }
+
+  
+    </script>
+ </body>
+ </html>
